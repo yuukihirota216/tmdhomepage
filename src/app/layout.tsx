@@ -21,11 +21,6 @@ export const metadata: Metadata = {
   title: "有限会社TMD（creationラボ） | 生成AI専門企業",
   description: "有限会社TMD（creationラボ）は大阪を拠点とする生成AI専門企業です。AI開発・研修・AI/DXコンサルティングで企業のデジタル変革を支援します。",
   keywords: "有限会社TMD,TMD,creationラボ,生成AI,AI開発,AI研修,DXコンサルティング,大阪,豊中,廣田優希",
-  icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
-  },
   openGraph: {
     title: "有限会社TMD（creationラボ） | 生成AI専門企業",
     description: "有限会社TMD（creationラボ）は大阪を拠点とする生成AI専門企業です。AI開発・研修・AI/DXコンサルティングで企業のデジタル変革を支援します。",
