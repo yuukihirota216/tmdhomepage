@@ -1,9 +1,11 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { newsItems } from '@/data/company';
+import { getAllNewsPosts, formatDate } from '@/lib/news';
 import Link from 'next/link';
 
 export function NewsSection() {
+  const newsItems = getAllNewsPosts().slice(0, 3); // 最新3件のみ表示
+
   return (
     <section className="nexus-section-padding bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,25 +18,27 @@ export function NewsSection() {
 
         <div className="space-y-6">
           {newsItems.map((item) => (
-            <Card key={item.id} className="nexus-card-hover border-0 shadow-md">
+            <Card key={item.slug} className="nexus-card-hover border-0 shadow-md">
               <CardContent className="p-6">
-                <div className="flex flex-col md:flex-row md:items-center gap-4">
-                  <div className="flex items-center gap-3">
-                    <span className="text-sm text-gray-500 font-mono">
-                      {item.date}
-                    </span>
-                    {item.category && (
-                      <Badge variant="secondary" className="bg-[#ffdf2b] text-black">
-                        {item.category}
-                      </Badge>
-                    )}
+                <Link href={`/news/${item.slug}`} className="block">
+                  <div className="flex flex-col md:flex-row md:items-center gap-4">
+                    <div className="flex items-center gap-3">
+                      <span className="text-sm text-gray-500 font-mono">
+                        {formatDate(item.date)}
+                      </span>
+                      {item.category && (
+                        <Badge variant="secondary" className="bg-[#ffdf2b] text-black">
+                          {item.category}
+                        </Badge>
+                      )}
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-gray-900 hover:text-[#333] transition-colors">
+                        {item.title}
+                      </h3>
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-gray-900 hover:text-[#333] transition-colors">
-                      {item.title}
-                    </h3>
-                  </div>
-                </div>
+                </Link>
               </CardContent>
             </Card>
           ))}
