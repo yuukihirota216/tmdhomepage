@@ -1,7 +1,7 @@
 # 有限会社TMD（creationラボ）コーポレートサイト
 
 大阪を拠点とする生成AI専門企業「有限会社TMD（creationラボ）」のコーポレートサイトです。
-
+npm run build
 ## 🚀 技術スタック
 
 - **フレームワーク**: Next.js 14 (App Router)

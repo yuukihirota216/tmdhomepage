@@ -19,6 +19,7 @@ const contactSchema = z.object({
   phone: z.string().optional(),
   category: z.string().min(1, 'お問い合わせ種別を選択してください'),
   message: z.string().min(10, 'お問い合わせ内容は10文字以上入力してください'),
+  privacyConsent: z.boolean().refine(val => val === true, 'プライバシーポリシーに同意してください'),
 });
 
 interface ContactFormProps {
@@ -191,6 +192,26 @@ export function ContactForm({ initialSubject, initialPosition }: ContactFormProp
             {errors.message && (
               <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>
             )}
+          </div>
+
+          <div className="flex items-start space-x-3">
+            <input
+              id="privacyConsent"
+              type="checkbox"
+              {...register('privacyConsent')}
+              className="mt-1 h-4 w-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500"
+            />
+            <div className="flex-1">
+              <Label htmlFor="privacyConsent" className="text-sm leading-relaxed cursor-pointer">
+                <a href="/privacy" target="_blank" className="text-blue-600 hover:underline">
+                  プライバシーポリシー
+                </a>
+                に同意して送信する *
+              </Label>
+              {errors.privacyConsent && (
+                <p className="text-red-500 text-sm mt-1">{errors.privacyConsent.message}</p>
+              )}
+            </div>
           </div>
 
           <div className="pt-4">

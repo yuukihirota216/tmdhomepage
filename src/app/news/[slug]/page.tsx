@@ -73,16 +73,17 @@ export default async function NewsDetailPage({ params }: Props) {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="shadow-lg border-0 mb-8">
             <CardContent className="p-8 lg:p-12">
-              <div className="prose prose-lg max-w-none
+              <div className="prose prose-xl max-w-none
                 prose-headings:text-gray-900 
-                prose-p:text-gray-700 prose-p:leading-relaxed
+                prose-p:text-gray-700 prose-p:leading-relaxed prose-p:text-lg
                 prose-a:text-[#142248] prose-a:font-semibold
                 prose-strong:text-gray-900
                 prose-ul:text-gray-700
                 prose-blockquote:border-l-[#ffdf2b] prose-blockquote:text-gray-600
-                prose-h1:text-3xl prose-h1:mb-6
-                prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-4
-                prose-h3:text-xl prose-h3:mt-6 prose-h3:mb-3
+                prose-h1:text-4xl prose-h1:mb-8 prose-h1:font-bold
+                prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:font-bold
+                prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-h3:font-semibold
+                prose-div:text-lg prose-div:leading-relaxed prose-div:mb-6
               ">
                 <MDXRemote source={post.content} />
               </div>

@@ -31,4 +31,5 @@ export interface ContactFormData {
   phone?: string;
   category: string;
   message: string;
+  privacyConsent: boolean;
 }

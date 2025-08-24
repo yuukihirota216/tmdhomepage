@@ -1,4 +1,7 @@
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { ScrollReveal } from '@/components/animations/scroll-reveal';
+import { HoverCard } from '@/components/animations/hover-card';
+import { AnimatedIcon } from '@/components/animations/animated-icon';
 import { companyInfo } from '@/data/company';
 import Image from 'next/image';
 import type { Metadata } from 'next';
@@ -134,93 +137,111 @@ export default function CompanyPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Mission */}
-            <Card className="shadow-lg border-0">
-              <CardHeader className="text-center pb-4">
-                <div className="mb-4 flex justify-center">
-                  <Image 
-                    src="/mission.png" 
-                    alt="ミッション" 
-                    width={360} 
-                    height={360}
-                    className="object-contain"
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900">ミッション</h3>
-                <div className="bg-[#ffdf2b] text-black px-3 py-1 rounded-md inline-block">
-                  <p className="text-sm font-semibold">MISSION</p>
-                </div>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-gray-700 leading-relaxed">
-                  生成AI技術を通じて、企業の創造性と生産性を向上させ、
-                  社会全体のイノベーション創出に貢献する
-                </p>
-              </CardContent>
-            </Card>
+            <ScrollReveal delay={0}>
+              <HoverCard intensity="medium">
+                <Card className="shadow-lg border-0 h-full">
+                  <CardHeader className="text-center pb-4">
+                    <div className="mb-4 flex justify-center">
+                      <AnimatedIcon animation="float" delay={0}>
+                        <Image 
+                          src="/mission.png" 
+                          alt="ミッション" 
+                          width={360} 
+                          height={360}
+                          className="object-contain"
+                        />
+                      </AnimatedIcon>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900">ミッション</h3>
+                    <div className="bg-[#ffdf2b] text-black px-3 py-1 rounded-md inline-block shadow-md">
+                      <p className="text-sm font-semibold">MISSION</p>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-gray-700 leading-relaxed">
+                      生成AI技術を通じて、企業の創造性と生産性を向上させ、
+                      社会全体のイノベーション創出に貢献する
+                    </p>
+                  </CardContent>
+                </Card>
+              </HoverCard>
+            </ScrollReveal>
 
             {/* Vision */}
-            <Card className="shadow-lg border-0">
-              <CardHeader className="text-center pb-4">
-                <div className="mb-4 flex justify-center">
-                  <Image 
-                    src="/vission.png" 
-                    alt="ビジョン" 
-                    width={360} 
-                    height={360}
-                    className="object-contain"
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900">ビジョン</h3>
-                <div className="bg-[#ffdf2b] text-black px-3 py-1 rounded-md inline-block">
-                  <p className="text-sm font-semibold">VISION</p>
-                </div>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-gray-700 leading-relaxed">
-                  AIと人間が協働する未来を実現し、
-                  すべての企業がAIの恩恵を享受できる社会を創造する
-                </p>
-              </CardContent>
-            </Card>
+            <ScrollReveal delay={0.1}>
+              <HoverCard intensity="medium">
+                <Card className="shadow-lg border-0 h-full">
+                  <CardHeader className="text-center pb-4">
+                    <div className="mb-4 flex justify-center">
+                      <AnimatedIcon animation="float" delay={0.5}>
+                        <Image 
+                          src="/vission.png" 
+                          alt="ビジョン" 
+                          width={360} 
+                          height={360}
+                          className="object-contain"
+                        />
+                      </AnimatedIcon>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900">ビジョン</h3>
+                    <div className="bg-[#ffdf2b] text-black px-3 py-1 rounded-md inline-block shadow-md">
+                      <p className="text-sm font-semibold">VISION</p>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-gray-700 leading-relaxed">
+                      AIと人間が協働する未来を実現し、
+                      すべての企業がAIの恩恵を享受できる社会を創造する
+                    </p>
+                  </CardContent>
+                </Card>
+              </HoverCard>
+            </ScrollReveal>
 
             {/* Values */}
-            <Card className="shadow-lg border-0">
-              <CardHeader className="text-center pb-4">
-                <div className="mb-4 flex justify-center">
-                  <Image 
-                    src="/values.png" 
-                    alt="価値観" 
-                    width={360} 
-                    height={360}
-                    className="object-contain"
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900">価値観</h3>
-                <div className="bg-[#ffdf2b] text-black px-3 py-1 rounded-md inline-block">
-                  <p className="text-sm font-semibold">VALUES</p>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">INNOVATION - 革新性</h4>
-                    <p className="text-sm text-gray-600">常に最新技術を追求し、新しい価値を創造します</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">COLLABORATION - 協働</h4>
-                    <p className="text-sm text-gray-600">お客様とのパートナーシップを重視し、共に成長します</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">QUALITY - 品質</h4>
-                    <p className="text-sm text-gray-600">高品質なサービス提供で、お客様の信頼にお応えします</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">GROWTH - 成長</h4>
-                    <p className="text-sm text-gray-600">個人と組織の継続的な学習と成長を大切にします</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            <ScrollReveal delay={0.2}>
+              <HoverCard intensity="medium">
+                <Card className="shadow-lg border-0 h-full">
+                  <CardHeader className="text-center pb-4">
+                    <div className="mb-4 flex justify-center">
+                      <AnimatedIcon animation="float" delay={1}>
+                        <Image 
+                          src="/values.png" 
+                          alt="価値観" 
+                          width={360} 
+                          height={360}
+                          className="object-contain"
+                        />
+                      </AnimatedIcon>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900">価値観</h3>
+                    <div className="bg-[#ffdf2b] text-black px-3 py-1 rounded-md inline-block shadow-md">
+                      <p className="text-sm font-semibold">VALUES</p>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-4">
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-1">INNOVATION - 革新性</h4>
+                        <p className="text-sm text-gray-600">常に最新技術を追求し、新しい価値を創造します</p>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-1">COLLABORATION - 協働</h4>
+                        <p className="text-sm text-gray-600">お客様とのパートナーシップを重視し、共に成長します</p>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-1">QUALITY - 品質</h4>
+                        <p className="text-sm text-gray-600">高品質なサービス提供で、お客様の信頼にお応えします</p>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-1">GROWTH - 成長</h4>
+                        <p className="text-sm text-gray-600">個人と組織の継続的な学習と成長を大切にします</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </HoverCard>
+            </ScrollReveal>
           </div>
         </div>
       </section>
