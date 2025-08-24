@@ -10,6 +10,7 @@
 - **UIコンポーネント**: shadcn/ui
 - **アニメーション**: Framer Motion
 - **フォーム**: React Hook Form + Zod
+- **メール送信**: Resend
 - **デプロイ**: Vercel (推奨)
 
 ## ✨ 主な機能
@@ -19,7 +20,7 @@
 - **企業情報**: 企業概要、代表メッセージ、企業理念・ビジョン
 - **サービス**: 事業一覧、各事業の詳細ページ
 - **採用情報**: 採用メッセージ、募集要項、求める人材
-- **お問い合わせ**: フォーム機能、連絡先情報
+- **お問い合わせ**: メール送信機能付きフォーム、自動返信、連絡先情報
 
 ### デザイン・UX
 - **レスポンシブデザイン**: モバイルファーストアプローチ
@@ -72,6 +73,8 @@ npm run lint
 ```
 src/
 ├── app/                    # Next.js App Router
+│   ├── api/              # API Routes
+│   │   └── contact/      # お問い合わせAPI
 │   ├── company/           # 企業情報ページ
 │   ├── services/          # サービスページ
 │   ├── recruitment/       # 採用情報ページ
@@ -116,9 +119,26 @@ vercel
 ```
 
 ### 環境変数
+
+お問い合わせフォームを機能させるために、以下の環境変数を設定してください：
+
+**ローカル開発用** (.env.local ファイルを作成):
 ```env
-NEXT_PUBLIC_SITE_URL=https://your-domain.com
+# Resend API Key (https://resend.com/api-keys で取得)
+RESEND_API_KEY=your_resend_api_key_here
+
+# サイトURL
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
 ```
+
+**Vercelデプロイ用**:
+1. [Resend](https://resend.com/)でアカウント作成
+2. API Keyを取得
+3. VercelダッシュボードのEnvironment Variablesに以下を設定:
+   - `RESEND_API_KEY`: ResendのAPI Key
+   - `NEXT_PUBLIC_SITE_URL`: デプロイ後のURL
+
+**重要**: Resendでドメイン認証を行い、`from` アドレスで使用するドメイン（例：creation-laboratory.com）を設定してください。
 
 ## 📊 実装済み最適化
 

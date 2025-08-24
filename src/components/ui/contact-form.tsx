@@ -48,14 +48,23 @@ export function ContactForm({ initialSubject, initialPosition }: ContactFormProp
     setIsSubmitting(true);
     
     try {
-      // Here you would typically send the data to your API
-      // For now, we'll just simulate a delay
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
       
-      console.log('Form submitted:', data);
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'メール送信に失敗しました');
+      }
+      
       setIsSubmitted(true);
     } catch (error) {
       console.error('Error submitting form:', error);
+      alert(error instanceof Error ? error.message : 'エラーが発生しました');
     } finally {
       setIsSubmitting(false);
     }
