@@ -22,7 +22,7 @@ export function AnimatedIcon({
       transition: {
         duration: 1.5,
         repeat: Infinity,
-        ease: 'easeInOut',
+        ease: "easeInOut" as const,
         delay,
       },
     },
@@ -31,7 +31,7 @@ export function AnimatedIcon({
       transition: {
         duration: 2,
         repeat: Infinity,
-        ease: 'easeInOut',
+        ease: "easeInOut" as const,
         delay,
       },
     },
@@ -40,7 +40,7 @@ export function AnimatedIcon({
       transition: {
         duration: 3,
         repeat: Infinity,
-        ease: 'linear',
+        ease: "linear" as const,
         delay,
       },
     },
@@ -50,7 +50,7 @@ export function AnimatedIcon({
       transition: {
         duration: 4,
         repeat: Infinity,
-        ease: 'easeInOut',
+        ease: "easeInOut" as const,
         delay,
       },
     },
@@ -63,7 +63,7 @@ export function AnimatedIcon({
       transition: {
         duration: 2,
         repeat: Infinity,
-        ease: 'easeInOut',
+        ease: "easeInOut" as const,
         delay,
       },
     },

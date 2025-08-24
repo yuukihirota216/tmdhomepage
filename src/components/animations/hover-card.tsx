@@ -31,7 +31,7 @@ export function HoverCard({ children, className = '', intensity = 'medium' }: Ho
       style={{ transformStyle: 'preserve-3d' }}
       whileHover={{
         ...hoverEffect,
-        transition: { duration: 0.3, ease: 'easeOut' }
+        transition: { duration: 0.3, ease: "easeOut" as const }
       }}
       whileTap={{ scale: 0.98 }}
       initial={{ opacity: 0, y: 20 }}
