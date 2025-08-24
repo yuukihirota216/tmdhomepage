@@ -50,7 +50,7 @@ export function getNewsPost(slug: string): NewsPost | null {
       excerpt: data.excerpt,
       content,
     };
-  } catch (error) {
+  } catch {
     return null;
   }
 }

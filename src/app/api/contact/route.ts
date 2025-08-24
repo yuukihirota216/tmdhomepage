@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { z } from 'zod';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// ビルド時のエラーを防ぐため、環境変数が存在しない場合はダミー値を使用
+const resend = new Resend(process.env.RESEND_API_KEY || 'dummy-key');
 
 const contactSchema = z.object({
   name: z.string().min(1, '氏名を入力してください'),
@@ -15,6 +16,15 @@ const contactSchema = z.object({
 
 export async function POST(request: NextRequest) {
   try {
+    // API キーが設定されているかチェック
+    if (!process.env.RESEND_API_KEY || process.env.RESEND_API_KEY === 'dummy-key') {
+      console.error('RESEND_API_KEY is not configured');
+      return NextResponse.json(
+        { error: 'メール送信機能が設定されていません' },
+        { status: 500 }
+      );
+    }
+
     const body = await request.json();
     
     // バリデーション
@@ -38,7 +48,7 @@ ${validatedData.message}
 このメールは TMD Corporate Site のお問い合わせフォームから送信されました。
 `;
 
-    const { data, error } = await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: 'TMD Corporate Site <contact@creation-laboratory.com>',
       to: ['yuukihirota@creation-laboratory.com'],
       subject: `【お問い合わせ】${validatedData.category} - ${validatedData.name}様`,
