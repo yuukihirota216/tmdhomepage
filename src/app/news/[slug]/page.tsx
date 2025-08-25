@@ -76,14 +76,21 @@ export default async function NewsDetailPage({ params }: Props) {
               <div className="prose prose-xl max-w-none
                 prose-headings:text-gray-900 
                 prose-p:text-gray-700 prose-p:leading-relaxed prose-p:text-lg
-                prose-a:text-[#142248] prose-a:font-semibold
-                prose-strong:text-gray-900
+                prose-a:text-blue-600 prose-a:font-semibold prose-a:underline prose-a:underline-offset-2
+                hover:prose-a:text-blue-800 hover:prose-a:bg-blue-50 prose-a:px-1 prose-a:py-0.5 
+                prose-a:rounded prose-a:transition-all prose-a:duration-200
+                prose-strong:text-gray-900 prose-strong:font-bold
+                prose-em:text-gray-600 prose-em:italic prose-em:font-medium
+                prose-code:bg-gray-100 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm prose-code:font-mono prose-code:text-gray-800
                 prose-ul:text-gray-700
-                prose-blockquote:border-l-[#ffdf2b] prose-blockquote:text-gray-600
-                prose-h1:text-4xl prose-h1:mb-8 prose-h1:font-bold
-                prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:font-bold
+                prose-blockquote:border-l-[#ffdf2b] prose-blockquote:text-gray-600 prose-blockquote:bg-yellow-50 prose-blockquote:px-6 prose-blockquote:py-4 prose-blockquote:rounded-r
+                prose-h1:text-4xl prose-h1:mb-8 prose-h1:font-bold prose-h1:border-b prose-h1:border-gray-200 prose-h1:pb-3
+                prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:font-bold prose-h2:border-b prose-h2:border-gray-100 prose-h2:pb-2
                 prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-h3:font-semibold
                 prose-div:text-lg prose-div:leading-relaxed prose-div:mb-6
+                [&_u]:underline [&_u]:underline-offset-2 [&_u]:decoration-2 [&_u]:decoration-blue-400
+                [&_del]:line-through [&_del]:text-gray-500
+                [&_mark]:bg-yellow-200 [&_mark]:px-1 [&_mark]:py-0.5 [&_mark]:rounded
               ">
                 <MDXRemote source={post.content} />
               </div>

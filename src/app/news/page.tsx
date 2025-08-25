@@ -29,6 +29,23 @@ export default function NewsPage() {
       {/* News List */}
       <section className="nexus-section-padding">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Back Button */}
+          <div className="mb-8">
+            <Link 
+              href="/"
+              className="inline-flex items-center text-gray-600 hover:text-[#142248] transition-colors group"
+            >
+              <svg 
+                className="w-5 h-5 mr-2 transition-transform group-hover:-translate-x-1" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              TOPページに戻る
+            </Link>
+          </div>
           <div className="space-y-8">
             {posts.map((post) => (
               <Card key={post.slug} className="shadow-lg border-0 hover:shadow-xl transition-shadow">

@@ -27,11 +27,11 @@ export function NewsSection() {
         <div className="space-y-6">
           {newsItems.map((item, index) => (
             <ScrollReveal key={item.slug} delay={index * 0.1}>
-              <HoverCard intensity="medium">
-                <Card className="border-0 shadow-md backdrop-blur-sm bg-white/90 relative overflow-hidden">
-                  <AnimatedGradient variant="card" />
-                  <CardContent className="p-6 relative z-10">
-                    <Link href={`/news/${item.slug}`} className="block">
+              <Link href={`/news/${item.slug}`} className="block">
+                <HoverCard intensity="medium">
+                  <Card className="border-0 shadow-md backdrop-blur-sm bg-white/90 relative overflow-hidden">
+                    <AnimatedGradient variant="card" />
+                    <CardContent className="p-6 relative z-10">
                       <div className="flex flex-col md:flex-row md:items-center gap-4">
                         <div className="flex items-center gap-3">
                           <span className="text-sm text-gray-500 font-mono">
@@ -49,10 +49,10 @@ export function NewsSection() {
                           </h3>
                         </div>
                       </div>
-                    </Link>
-                  </CardContent>
-                </Card>
-              </HoverCard>
+                    </CardContent>
+                  </Card>
+                </HoverCard>
+              </Link>
             </ScrollReveal>
           ))}
         </div>

@@ -54,7 +54,7 @@ export function RecruitmentSection() {
               </div>
 
               <Link href="/recruitment">
-                <Button className="nexus-button-primary text-lg px-8 py-4">
+                <Button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white border-none rounded-full px-8 py-4 shadow-lg hover:shadow-blue-500/25 transition-all duration-300 text-lg">
                   採用情報を見る
                 </Button>
               </Link>
