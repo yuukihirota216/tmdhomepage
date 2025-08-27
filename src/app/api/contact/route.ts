@@ -88,6 +88,8 @@ ${validatedData.message}
     } else {
       // 本番環境では実際のメール送信
       console.log('Using real email sending (production mode)');
+      console.log('Sending to admin:', emailData.to);
+      console.log('Email subject:', emailData.subject);
       
       if (!process.env.RESEND_API_KEY) {
         console.error('RESEND_API_KEY is not configured in production');
@@ -98,26 +100,30 @@ ${validatedData.message}
       }
 
       try {
-        console.log('Attempting to send email via Resend...');
+        console.log('Attempting to send admin notification email via Resend...');
         const result = await resend!.emails.send(emailData);
         error = result.error;
-        console.log('Resend response:', result);
+        console.log('Admin email Resend response:', result);
         
         if (result.data) {
-          console.log('Email sent successfully with ID:', result.data.id);
+          console.log('Admin email sent successfully with ID:', result.data.id);
+        }
+        if (result.error) {
+          console.error('Admin email Resend error:', result.error);
         }
       } catch (resendError) {
-        console.error('Resend API error:', resendError);
+        console.error('Admin email Resend API error:', resendError);
         error = resendError;
       }
     }
 
-    if (error) {
-      console.error('Email sending error:', error);
-      return NextResponse.json(
-        { error: 'メール送信に失敗しました。しばらく時間をおいて再度お試しください。' },
-        { status: 500 }
-      );
+    // 管理者メールのエラーをログに記録するが、処理は続行
+    const adminEmailError = error;
+    if (adminEmailError) {
+      console.error('Admin email sending error:', adminEmailError);
+      console.log('Continuing with auto-reply despite admin email error...');
+    } else {
+      console.log('Admin email sent successfully');
     }
 
     // お客様への自動返信メール
@@ -164,6 +170,19 @@ Email: yuukihirota@creation-laboratory.com
     }
 
     console.log('Contact form submission completed successfully');
+    
+    // 管理者メールに失敗した場合は警告を含める
+    if (adminEmailError) {
+      console.warn('Admin email failed, but auto-reply was sent successfully');
+      return NextResponse.json(
+        { 
+          message: 'お問い合わせを送信しました',
+          warning: '管理者への通知に問題が発生しましたが、お客様への確認メールは送信されました。'
+        },
+        { status: 200 }
+      );
+    }
+    
     return NextResponse.json(
       { message: 'お問い合わせを送信しました' },
       { status: 200 }
