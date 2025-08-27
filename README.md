@@ -39,6 +39,7 @@ npm run build
 ### 前提条件
 - Node.js 18.0.0以上
 - npm または pnpm
+- Resend APIキー（本番環境でのメール送信用）
 
 ### インストール・起動
 
@@ -67,6 +68,59 @@ npm start
 # Lintチェック
 npm run lint
 ```
+
+## 🌐 Vercelデプロイ設定
+
+### 環境変数の設定
+
+1. **Vercelダッシュボード**にアクセス
+2. プロジェクトの **Settings** → **Environment Variables** を開く
+3. 以下の環境変数を追加：
+
+| 変数名 | 値 | 説明 |
+|--------|----|----|
+| `RESEND_API_KEY` | `re_xxxxxxxxxx` | Resend APIキー（メール送信用） |
+| `NODE_ENV` | `production` | 本番環境の識別 |
+
+### メール送信機能について
+
+- **開発環境**: コンソールにメール内容を出力（模擬送信）
+- **本番環境**: Resend APIを使用して実際にメール送信
+
+#### 送信元ドメインについて
+
+現在の設定では、Resendの検証済みデフォルトドメイン `onboarding@resend.dev` を使用しています。
+
+**カスタムドメインを使用したい場合:**
+
+1. [Resend Domains](https://resend.com/domains) にアクセス
+2. `creation-laboratory.com` を追加
+3. 提供されるDNSレコードをドメインのDNS設定に追加：
+   - TXT レコード（SPF認証用）
+   - CNAME レコード（DKIM認証用）
+4. ドメイン認証完了後、メール送信コードの `from` フィールドを変更：
+   ```typescript
+   from: 'TMD Corporate Site <contact@creation-laboratory.com>'
+   ```
+
+**注意**: ドメイン認証が完了するまでは現在の `onboarding@resend.dev` をそのまま使用してください。
+
+### デプロイ手順
+
+```bash
+# GitHubにプッシュ
+git add .
+git commit -m "Add email functionality"
+git push origin main
+
+# VercelのGitHub連携により自動デプロイ
+```
+
+### 確認事項
+
+1. Vercelで環境変数が正しく設定されているか
+2. お問い合わせフォームからテスト送信を実行
+3. Vercelのファンクションログでエラーがないか確認
 
 ## 📁 プロジェクト構造
 
