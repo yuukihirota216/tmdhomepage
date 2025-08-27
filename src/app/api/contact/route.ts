@@ -17,8 +17,17 @@ const contactSchema = z.object({
   message: z.string().min(10, 'お問い合わせ内容は10文字以上入力してください'),
 });
 
+// メールデータの型定義
+interface EmailData {
+  from: string;
+  to: string[];
+  replyTo?: string[];
+  subject: string;
+  text: string;
+}
+
 // 開発環境用の模擬メール送信機能
-function sendMockEmail(emailData: any) {
+function sendMockEmail(emailData: EmailData) {
   console.log('\n=== 模擬メール送信 ===');
   console.log('From:', emailData.from);
   console.log('To:', emailData.to);
@@ -61,7 +70,7 @@ ${validatedData.message}
 このメールは TMD Corporate Site のお問い合わせフォームから送信されました。
 `;
 
-    const emailData = {
+    const emailData: EmailData = {
       from: 'TMD Corporate Site <onboarding@resend.dev>',
       to: ['yuukihirota@creation-laboratory.com'],
       replyTo: [validatedData.email],
@@ -131,7 +140,7 @@ ${validatedData.name} 様
 Email: yuukihirota@creation-laboratory.com
 `;
 
-    const autoReplyData = {
+    const autoReplyData: EmailData = {
       from: 'TMD Corporate Site <onboarding@resend.dev>',
       to: [validatedData.email],
       subject: '【自動返信】お問い合わせありがとうございます - 有限会社TMD',
