@@ -71,7 +71,7 @@ ${validatedData.message}
 `;
 
     const emailData: EmailData = {
-      from: 'TMD Corporate Site <onboarding@resend.dev>',
+      from: 'TMD Corporate Site <contact@creation-laboratory.com>',
       to: ['yuukihirota@creation-laboratory.com'],
       replyTo: [validatedData.email],
       subject: `【お問い合わせ】${validatedData.category} - ${validatedData.name}様`,
@@ -141,7 +141,7 @@ Email: yuukihirota@creation-laboratory.com
 `;
 
     const autoReplyData: EmailData = {
-      from: 'TMD Corporate Site <onboarding@resend.dev>',
+      from: 'TMD Corporate Site <contact@creation-laboratory.com>',
       to: [validatedData.email],
       subject: '【自動返信】お問い合わせありがとうございます - 有限会社TMD',
       text: autoReplyContent,
