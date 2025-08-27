@@ -72,7 +72,7 @@ ${validatedData.message}
 
     const emailData: EmailData = {
       from: 'TMD Corporate Site <contact@tmdcorporation.com>',
-      to: ['yuukihirota@creation-laboratory.com'],
+      to: ['yuukihirota516@gmail.com'],
       replyTo: [validatedData.email],
       subject: `【お問い合わせ】${validatedData.category} - ${validatedData.name}様`,
       text: emailContent,
@@ -133,7 +133,7 @@ ${validatedData.name} 様
 この度は、有限会社TMD（creationラボ）にお問い合わせいただき、誠にありがとうございます。
 
 以下の内容でお問い合わせを承りました。
-担当者より営業日24時間以内にご返信いたします。
+担当者より営業日から３営業日以内にご返信いたします。
 
 【お問い合わせ内容】
 お問い合わせ種別: ${validatedData.category}
@@ -143,7 +143,7 @@ ${validatedData.name} 様
 
 ---
 有限会社TMD（creationラボ）
-Email: yuukihirota@creation-laboratory.com
+Email: info@creation-laboratory.com
 `;
 
     const autoReplyData: EmailData = {
