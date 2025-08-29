@@ -13,8 +13,7 @@ const jobListings = [
   {
     id: 'ai-engineer',
     title: 'AIエンジニア',
-    type: '正社員',
-    department: '開発部',
+    type: '正社員・業務委託',
     description: '生成AI技術を活用したソリューション開発に携わっていただきます。',
     requirements: [
       'Python、JavaScript等のプログラミング経験',
@@ -29,28 +28,9 @@ const jobListings = [
     ]
   },
   {
-    id: 'frontend-engineer',
-    title: 'フロントエンドエンジニア',
-    type: '正社員',
-    department: '開発部',
-    description: 'Webアプリケーションのフロントエンド開発を担当していただきます。',
-    requirements: [
-      'React、Next.js等のフレームワーク経験',
-      'TypeScript、JavaScriptの開発経験',
-      'UI/UXに対する関心',
-      'レスポンシブデザインの理解'
-    ],
-    preferred: [
-      'Tailwind CSS、styled-componentsの使用経験',
-      'パフォーマンス最適化の知識',
-      'デザインシステムの構築経験'
-    ]
-  },
-  {
     id: 'project-manager',
     title: 'プロジェクトマネージャー',
-    type: '正社員',
-    department: '事業開発部',
+    type: '正社員・業務委託',
     description: 'AI導入プロジェクトの企画・管理・推進を行っていただきます。',
     requirements: [
       'プロジェクト管理の経験（3年以上）',
@@ -68,7 +48,6 @@ const jobListings = [
     id: 'ai-trainer',
     title: 'AIトレーナー・講師',
     type: '正社員・業務委託',
-    department: '研修事業部',
     description: '企業向けAI研修の講師として、実践的な教育を提供していただきます。',
     requirements: [
       'AI・機械学習分野の知識',
@@ -85,8 +64,7 @@ const jobListings = [
   {
     id: 'assistant',
     title: 'アシスタント',
-    type: '正社員・パート',
-    department: '管理部',
+    type: '正社員・パート・業務委託',
     description: '事務作業やプロジェクトサポート業務を担当していただきます。',
     requirements: [
       '基本的なPCスキル（Word、Excel等）',
@@ -167,9 +145,6 @@ export default function RecruitmentPage() {
                       <div className="flex flex-wrap gap-2">
                         <Badge variant="secondary" className="bg-[#ffdf2b] text-black">
                           {job.type}
-                        </Badge>
-                        <Badge variant="outline">
-                          {job.department}
                         </Badge>
                       </div>
                     </div>
