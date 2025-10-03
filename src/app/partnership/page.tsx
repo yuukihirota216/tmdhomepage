@@ -95,9 +95,9 @@ export default function PartnershipPage() {
               </div>
               
               {/* 豊中商工会議所ロゴとリンク */}
-              <div className="partner-info flex items-center gap-6 mb-6">
-                <div className="partner-details flex-1">
-                  <h3 className="result-title text-2xl font-bold text-white mb-2">
+              <div className="partner-info flex flex-col md:flex-row md:items-center gap-6 mb-6">
+                <div className="partner-details flex-1 order-2 md:order-1">
+                  <h3 className="result-title text-xl md:text-2xl font-bold text-white mb-2">
                     豊中商工会議所様 会員企業向け AI活用実践セミナー
                   </h3>
                   <a 
@@ -109,13 +109,13 @@ export default function PartnershipPage() {
                     豊中商工会議所 公式サイト →
                   </a>
                 </div>
-                <div className="partner-logo bg-white rounded-lg p-4 shadow-lg flex-shrink-0">
+                <div className="partner-logo bg-white rounded-lg p-4 shadow-lg flex-shrink-0 order-1 md:order-2 self-center md:self-auto">
                   <Image 
                     src="/toyonaka-chamber-logo.png" 
                     alt="豊中商工会議所" 
                     width={120}
                     height={72}
-                    className="h-18 w-auto object-contain"
+                    className="h-16 md:h-18 w-auto object-contain"
                   />
                 </div>
               </div>
