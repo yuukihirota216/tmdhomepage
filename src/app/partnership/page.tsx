@@ -7,7 +7,7 @@ export default function PartnershipPage() {
       <StructuredData
         type="Service"
         serviceName="自治体・地域団体との連携"
-        serviceDescription="地域の中堅・中小企業のAI活用を推進"
+        serviceDescription="官民連携で地域の中堅・中小企業のAI活用を推進"
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
@@ -15,14 +15,14 @@ export default function PartnershipPage() {
         <div className="page-header relative pt-24 pb-16">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="page-title text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="page-title text-1xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               自治体・地域団体との連携
-              <span className="page-title-en block text-lg md:text-xl text-slate-300 mt-3 font-normal">
+              <span className="page-title-en block text-base md:text-xl text-slate-300 mt-3 font-normal">
                 Partnership with Local Governments and Regional Organizations
               </span>
             </h1>
-            <p className="page-subtitle text-xl md:text-2xl text-slate-200 max-w-3xl mx-auto">
-              地域の中堅・中小企業のAI活用を推進
+            <p className="page-subtitle text-xl md:text-1xl text-slate-200 max-w-3xl mx-auto">
+              官民連携で地域の中堅・中小企業のAI活用を推進
             </p>
           </div>
         </div>
@@ -53,9 +53,6 @@ export default function PartnershipPage() {
             {/* 実績1 */}
             <div className="result-card bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12 hover:bg-white/15 transition-all duration-300">
               <div className="result-header flex flex-wrap items-center gap-4 mb-6">
-                <span className="result-date bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-medium">
-                  2025年9月26日
-                </span>
                 <span className="result-badge bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-medium">
                   会員企業向け
                 </span>
@@ -86,9 +83,6 @@ export default function PartnershipPage() {
             {/* 実績2 */}
             <div className="result-card bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12 hover:bg-white/15 transition-all duration-300">
               <div className="result-header flex flex-wrap items-center gap-4 mb-6">
-                <span className="result-date bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-medium">
-                  2024年12月24日
-                </span>
                 <span className="result-badge bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-medium">
                   会員企業向け
                 </span>
