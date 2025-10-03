@@ -50,7 +50,9 @@ npm install
 # 開発サーバーを起動
 npm run dev
 ```
-
+#開発サーバー停止
+pkill -f "next dev"
+,,,
 ブラウザで [http://localhost:3000](http://localhost:3000) を開いてサイトを確認してください。
 
 ### 利用可能なスクリプト

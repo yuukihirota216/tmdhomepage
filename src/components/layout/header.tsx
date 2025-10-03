@@ -12,6 +12,7 @@ export function Header() {
     { name: 'ホーム', href: '/' },
     { name: '企業情報', href: '/company' },
     { name: 'サービス', href: '/services' },
+    { name: '自治体向けセミナー', href: '/partnership' },
     { name: 'ニュース', href: '/news' },
     { name: '採用情報', href: '/recruitment' },
     { name: 'お問い合わせ', href: '/contact' },
