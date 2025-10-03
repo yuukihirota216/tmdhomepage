@@ -1,21 +1,13 @@
 import { StructuredData } from '@/components/seo/structured-data';
+import Image from 'next/image';
 
 export default function PartnershipPage() {
   return (
     <>
       <StructuredData
-        data={{
-          '@context': 'https://schema.org',
-          '@type': 'WebPage',
-          name: '自治体・地域団体との連携',
-          description: '地域の中堅・中小企業のAI活用を推進',
-          url: '/partnership',
-          isPartOf: {
-            '@type': 'WebSite',
-            name: 'TMDコーポレート',
-            url: '/',
-          },
-        }}
+        type="Service"
+        serviceName="自治体・地域団体との連携"
+        serviceDescription="地域の中堅・中小企業のAI活用を推進"
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
@@ -118,9 +110,11 @@ export default function PartnershipPage() {
                   </a>
                 </div>
                 <div className="partner-logo bg-white rounded-lg p-4 shadow-lg flex-shrink-0">
-                  <img 
+                  <Image 
                     src="/toyonaka-chamber-logo.png" 
                     alt="豊中商工会議所" 
+                    width={120}
+                    height={72}
                     className="h-18 w-auto object-contain"
                   />
                 </div>
