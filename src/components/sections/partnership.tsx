@@ -17,11 +17,10 @@ export function PartnershipSection() {
               Partnership with Government and Regional Organizations
             </p>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-6 font-bold">
-              地域の中堅・中小企業のAI活用を、官民連携で推進
+              官民連携と地域パートナーシップを基盤に、持続的な地域経済の発展に貢献
             </p>
             <p className="text-lg text-slate-200 max-w-4xl mx-auto leading-relaxed mb-6">
-              有限会社TMDは、<br />全国の自治体様・商工会議所様等と連携し、<br />
-              地域企業のAI推進を支援しています。
+              有限会社TMDは、自治体との官民連携、ならびに地域団体（商工会・NPO法人等）との協働を通じて、地域に根差したAI活用支援を展開しています。行政と民間、さらに地域コミュニティを結ぶパートナーとして、持続的な成長と社会的価値の創出を目指しています。
             </p>
             <Link href="/partnership">
               <Button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white border-none rounded-full px-8 py-3 font-semibold shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
