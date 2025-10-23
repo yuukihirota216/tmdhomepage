@@ -31,6 +31,49 @@ export default function CompanyPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-16">
 
+            {/* 企業概要 */}
+            <div className="text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900">企業概要</h2>
+              
+              <Card className="shadow-2xl max-w-6xl mx-auto bg-gradient-to-br from-white to-gray-50 border-0">
+                <CardContent className="p-6 sm:p-8 md:p-10 lg:p-12">
+                  <div className="text-center space-y-8">
+                    {/* Badge */}
+                    <div className="inline-block">
+                      <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+                        About TMD
+                      </span>
+                    </div>
+                    
+                    {/* Content */}
+                    <div className="max-w-4xl mx-auto">
+                      <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-gray-700 leading-relaxed text-left">
+                        <p>
+                          <strong className="text-gray-900">有限会社TMD（屋号：creationラボ）</strong>は、AI開発から研修まで一貫して提供する、課題解決型のDX推進パートナー企業です。
+                        </p>
+                        <p>
+                          創業以来、多くの企業様のAI導入プロジェクトに携わり、製造業からサービス業まで幅広い業界でのシステム開発実績を積み重ねてきました。自社でAIソリューションを開発・実装してきた豊富な経験があるからこそ、机上の空論ではない<strong className="text-gray-900">「現場で本当に使えるAI活用法」</strong>を熟知しています。
+                        </p>
+                        <p>
+                          私たちの最大の強みは、実際の開発現場で培った生きた知識を基にした<strong className="text-gray-900">「実践型AI研修」</strong>と、開発から運用まで伴走する<strong className="text-gray-900">「包括的なDX支援」</strong>です。研修だけでなく、実際のAIシステム開発も手掛けることで、理論と実装のギャップを埋め、企業様の課題解決を実現しています。
+                        </p>
+                        <p>
+                          最新のAI技術を活用したカスタム開発、業務効率化ツールの構築、そして社員教育まで、ワンストップでお客様のデジタル変革を支援。大阪を拠点に、全国の企業様に対して、確かな技術力と豊富な実績に裏打ちされた価値を提供し続けています。
+                        </p>
+                      </div>
+                      
+                      <div className="flex flex-wrap justify-center gap-3 mt-8">
+        
+                        <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">DX支援</span>
+                        <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">企業研修</span>
+                        <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">AIシステム開発</span>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
             {/* 代表メッセージ */}
             <div className="text-center">
               <h2 className="text-3xl font-bold mb-8 text-gray-900">代表メッセージ</h2>
@@ -122,8 +165,10 @@ export default function CompanyPage() {
                   </CardHeader>
                   <CardContent className="text-center">
                     <p className="text-gray-700 leading-relaxed">
-                      生成AI技術を通じて、企業の創造性と生産性を向上させ、
-                      社会全体のイノベーション創出に貢献する
+                      <strong className="text-gray-900">AIの力で、すべての企業に<br />
+                      実装可能なイノベーションを</strong><br />
+                      技術と教育の両輪で企業の課題を解決し、<br />
+                      日本のDXを現場から変革する
                     </p>
                   </CardContent>
                 </Card>
@@ -185,20 +230,24 @@ export default function CompanyPage() {
                   <CardContent>
                     <div className="space-y-4">
                       <div>
-                        <h4 className="font-semibold text-gray-900 mb-1">INNOVATION - 革新性</h4>
-                        <p className="text-sm text-gray-600">常に最新技術を追求し、新しい価値を創造します</p>
+                        <h4 className="font-semibold text-gray-900 mb-1">1. 実装ファースト</h4>
+                        <p className="text-sm text-gray-600">理論だけでなく、「使える形」にする</p>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 mb-1">COLLABORATION - 協働</h4>
-                        <p className="text-sm text-gray-600">お客様とのパートナーシップを重視し、共に成長します</p>
+                        <h4 className="font-semibold text-gray-900 mb-1">2. 現場主義</h4>
+                        <p className="text-sm text-gray-600">机上の空論ではなく、現場の課題から始める</p>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 mb-1">QUALITY - 品質</h4>
-                        <p className="text-sm text-gray-600">高品質なサービス提供で、お客様の信頼にお応えします</p>
+                        <h4 className="font-semibold text-gray-900 mb-1">3. 伴走型支援</h4>
+                        <p className="text-sm text-gray-600">導入して終わりではなく、定着まで責任を持つ</p>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 mb-1">GROWTH - 成長</h4>
-                        <p className="text-sm text-gray-600">個人と組織の継続的な学習と成長を大切にします</p>
+                        <h4 className="font-semibold text-gray-900 mb-1">4. 技術×教育</h4>
+                        <p className="text-sm text-gray-600">開発力と教育力の融合で、真の変革を実現する</p>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-1">5. 共創の精神</h4>
+                        <p className="text-sm text-gray-600">クライアントと共に学び、共に成長する</p>
                       </div>
                     </div>
                   </CardContent>

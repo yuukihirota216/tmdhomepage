@@ -4,6 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { companyInfo } from '@/data/company';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export function AboutSection() {
@@ -219,15 +220,16 @@ export function AboutSection() {
           <div>
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
               <p>
-                <strong className="text-gray-900">{companyInfo.name}（屋号：{companyInfo.tradeName}）</strong>は、
-                生成AI技術を中核としたイノベーション創出企業です。
+                <strong className="text-gray-900">{companyInfo.name}（屋号：{companyInfo.tradeName}）</strong>は、AI開発から研修まで一貫して提供する、課題解決型のDX推進パートナー企業です。
               </p>
               <p>
-                最新のAI技術と深い業界知識を組み合わせ、
-                企業のデジタル変革と競争力強化を実現します。
+                <strong className="text-gray-900">大企業から中堅、中小企業まで多くの開発実績と導入支援の経験</strong>を基に、<strong className="text-gray-900">「現場で本当に使えるAI」</strong>の開発と、<strong className="text-gray-900">実践的な企業研修</strong>を提供しています。
               </p>
               <p>
-                大阪を拠点に、全国の企業様にサービスを展開しています。
+                開発も研修も手掛けるからこそ、理論と実装のギャップを埋め、お客様の確実なDX推進を実現します。
+              </p>
+              <p>
+                大阪を拠点に、全国の企業様のデジタル変革を支援しています。
               </p>
             </div>
             
@@ -244,6 +246,18 @@ export function AboutSection() {
           <div>
             <Card className="bg-white shadow-lg border-0">
               <CardContent className="p-8">
+                {/* Hero Image */}
+                <div className="mb-6">
+                  <Image
+                    src="/about-hero.jpg"
+                    alt="TMD - AI-Powered Innovation Company"
+                    width={240}
+                    height={250}
+                    className="rounded-2xl shadow-lg object-cover w-full h-[180px] sm:h-[220px] md:h-[250px]"
+                    priority
+                  />
+                </div>
+                
                 <div className="space-y-6">
                   <div>
                     <h3 className="font-bold text-gray-900 mb-2">会社名</h3>
