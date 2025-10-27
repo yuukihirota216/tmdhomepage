@@ -72,7 +72,7 @@ ${validatedData.message}
 
     const emailData: EmailData = {
       from: 'TMD Corporate Site <contact@tmdcorporation.com>',
-      to: [' yuukihirota@creation-laboratory.com'],
+      to: ['yuukihirota@creation-laboratory.com'],
       replyTo: [validatedData.email],
       subject: `【お問い合わせ】${validatedData.category} - ${validatedData.name}様`,
       text: emailContent,
