@@ -50,7 +50,60 @@ export default function PartnershipPage() {
               セミナー・講演実績
             </h2>
 
-            {/* 実績1 */}
+            {/* 実績1 - 生成AI活用セミナー */}
+            <div className="result-card bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12 hover:bg-white/15 transition-all duration-300">
+              <div className="result-header flex flex-wrap items-center gap-4 mb-6">
+                <span className="result-badge bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-medium">
+                  会員企業向け
+                </span>
+              </div>
+              
+              {/* 泉南市商工会ロゴとタイトル */}
+              <div className="partner-info flex flex-col md:flex-row md:items-center gap-6 mb-6">
+                <div className="partner-details flex-1 order-2 md:order-1">
+                  <h3 className="result-title text-xl md:text-2xl font-bold text-white mb-2">
+                    泉南市商工会様　生成AI活用セミナー
+                  </h3>
+                  <a 
+                    href="https://sennan-sci.or.jp/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-300 hover:text-blue-200 text-sm font-medium underline transition-colors duration-200"
+                  >
+                    泉南市商工会 公式サイト →
+                  </a>
+                </div>
+                <div className="partner-logo bg-white rounded-lg p-4 shadow-lg flex-shrink-0 order-1 md:order-2 self-center md:self-auto">
+                  <Image 
+                    src="/sennan-chamber-logo.png" 
+                    alt="泉南市商工会" 
+                    width={150}
+                    height={150}
+                    className="h-20 md:h-24 w-auto object-contain"
+                  />
+                </div>
+              </div>
+              
+              <div className="detail-item flex flex-wrap items-center gap-4 mb-8">
+                <span className="detail-label text-slate-300 font-medium">テーマ</span>
+                <span className="detail-value text-white">　生成AIの戦略的活用と業務効率化</span>
+              </div>
+
+              <div className="result-content">
+                <h4 className="text-xl font-semibold text-white mb-4">セミナー内容</h4>
+                <p className="text-slate-200 mb-4 leading-relaxed">
+                  注目を集める生成AIは、ビジネスにおける革新的なツールとして幅広く導入が進んでおります。
+                </p>
+                <p className="text-slate-200 mb-4 leading-relaxed">
+                  本セミナーでは、「生成AI」の具体的なビジネスへの戦略と、その導入によって実現される業務効率化について、活用事例に基づき、深く掘り下げてご紹介いたしました。
+                </p>
+                <p className="text-slate-200 leading-relaxed">
+                  また、受講者の皆様に「生成AI」を直接ご体感いただくための実践的な体験型セッションを行わせていただきました。
+                </p>
+              </div>
+            </div>
+
+            {/* 実績2 - 八興会様 */}
             <div className="result-card bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12 hover:bg-white/15 transition-all duration-300">
               <div className="result-header flex flex-wrap items-center gap-4 mb-6">
                 <span className="result-badge bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-medium">
@@ -80,7 +133,7 @@ export default function PartnershipPage() {
               </div>
             </div>
 
-            {/* 実績2 */}
+            {/* 実績3 - 豊中商工会議所様 */}
             <div className="result-card bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12 hover:bg-white/15 transition-all duration-300">
               <div className="result-header flex flex-wrap items-center gap-4 mb-6">
                 <span className="result-badge bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-medium">
