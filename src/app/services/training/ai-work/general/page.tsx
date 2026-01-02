@@ -46,22 +46,22 @@ const commonChallenges = [
 
 const trainingGoals = [
   {
-    title: 'プロンプト設計の基本スキル',
+    title: 'プロンプト設計の基本スキル'
   },
   {
-    title: 'グループウェアでのAI活用パターン',
+    title: 'グループウェアでのAI活用パターン'
   },
   {
-    title: '定型業務の効率化テンプレ',
+    title: '定型業務の効率化テンプレ'
   },
   {
-    title: '会計業務でのAI活用',
+    title: '会計業務での安全な使い方'
   },
   {
-    title: 'クリエイティブ制作の時短ワークフロー',
+    title: 'クリエイティブ制作の時短ワークフロー'
   },
   {
-    title: '総合演習で作る「自社の業務活用集」',
+    title: '総合演習で作る「自社の業務活用集」'
   }
 ];
 
@@ -228,12 +228,9 @@ export default function GeneralTrainingPage() {
             {trainingGoals.map((goal, index) => (
               <Card key={index} className="shadow-lg border-0 hover:shadow-xl transition-shadow">
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-3">
+                  <h3 className="text-lg font-bold text-gray-900 text-center">
                     {goal.title}
                   </h3>
-                  <p className="text-gray-600">
-                    {goal.description}
-                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -254,21 +251,13 @@ export default function GeneralTrainingPage() {
             {curriculum.map((session, index) => (
               <Card key={index} className="shadow-lg border-0">
                 <CardContent className="p-8">
-                  <div className="flex items-center mb-6">
+                  <div className="flex items-center justify-center">
                     <Badge className="text-white mr-4" style={{backgroundColor: '#142248'}}>
                       {session.session}
                     </Badge>
                     <h3 className="text-2xl font-bold text-gray-900">
                       {session.title}
                     </h3>
-                  </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {session.content.map((item, idx) => (
-                      <div key={idx} className="flex items-start">
-                        <span className="text-[#ffdf2b] mr-2 mt-1">✓</span>
-                        <span className="text-gray-700">{item}</span>
-                      </div>
-                    ))}
                   </div>
                 </CardContent>
               </Card>
