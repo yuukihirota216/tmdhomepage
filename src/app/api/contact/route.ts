@@ -5,8 +5,16 @@ import { z } from 'zod';
 // 開発環境かどうかを判定
 const isDevelopment = process.env.NODE_ENV === 'development';
 
-// 本番環境でのみResendを初期化
-const resend = !isDevelopment ? new Resend(process.env.RESEND_API_KEY) : null;
+// Resendを遅延初期化（実際に使用する時のみ）
+let resend: Resend | null = null;
+
+function getResend() {
+  if (isDevelopment) return null;
+  if (!resend && process.env.RESEND_API_KEY) {
+    resend = new Resend(process.env.RESEND_API_KEY);
+  }
+  return resend;
+}
 
 const contactSchema = z.object({
   name: z.string().min(1, '氏名を入力してください'),
@@ -101,7 +109,11 @@ ${validatedData.message}
 
       try {
         console.log('Attempting to send admin notification email via Resend...');
-        const result = await resend!.emails.send(emailData);
+        const resendClient = getResend();
+        if (!resendClient) {
+          throw new Error('Resend client not available');
+        }
+        const result = await resendClient.emails.send(emailData);
         error = result.error;
         console.log('Admin email Resend response:', result);
         
@@ -161,8 +173,11 @@ Email: info@creation-laboratory.com
       // 本番環境では実際のメール送信
       try {
         console.log('Sending auto-reply email...');
-        await resend!.emails.send(autoReplyData);
-        console.log('Auto-reply email sent successfully');
+        const resendClient = getResend();
+        if (resendClient) {
+          await resendClient.emails.send(autoReplyData);
+          console.log('Auto-reply email sent successfully');
+        }
       } catch (autoReplyError) {
         console.error('Auto-reply email error:', autoReplyError);
         // 自動返信の失敗は全体の成功を阻害しない
