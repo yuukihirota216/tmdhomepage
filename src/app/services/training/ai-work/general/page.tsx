@@ -47,27 +47,21 @@ const commonChallenges = [
 const trainingGoals = [
   {
     title: 'プロンプト設計の基本スキル',
-    description: '再現性のある作り方を習得'
   },
   {
     title: 'グループウェアでのAI活用パターン',
-    description: '日常業務に組み込み方法を習得'
   },
   {
     title: '定型業務の効率化テンプレ',
-    description: '手順・指示・出力フォーマットを体系化'
   },
   {
-    title: '会計業務での安全な使い方',
-    description: 'チェック観点・注意点を含めた実践方法'
+    title: '会計業務でのAI活用',
   },
   {
     title: 'クリエイティブ制作の時短ワークフロー',
-    description: '企画→案出し→叩き台の効率的な進め方'
   },
   {
     title: '総合演習で作る「自社の業務活用集」',
-    description: '研修後も使える資産を作成'
   }
 ];
 
@@ -135,7 +129,7 @@ const curriculum = [
 ];
 
 const implementationDetails = {
-  format: 'オンライン（要相談）',
+  format: 'オンライン',
   duration: '合計12時間',
   participants: '推奨 5～20名（それ以上は要相談）',
   preparation: 'PC、ネット環境、使用するクラウドツール（貴社環境に合わせます）',
