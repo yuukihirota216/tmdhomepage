@@ -215,6 +215,26 @@ export default async function ServiceDetailPage({ params }: Props) {
         </div>
       </section>
 
+      {/* AI Work Training Section - Only show for ai-training service */}
+      {service.id === 'ai-training' && (
+        <section className="nexus-section-padding">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold mb-6 text-gray-900">
+              生成AI 業務活用研修
+            </h2>
+            <p className="text-xl text-gray-600 mb-8">
+              業務に直結する生成AI活用を、演習中心で定着まで支援。
+              業種別に特化した実践的な研修プログラムをご提供します。
+            </p>
+            <Link href="/services/training/ai-work">
+              <Button className="nexus-button-primary text-lg px-8 py-4">
+                業務活用研修についてはこちら
+              </Button>
+            </Link>
+          </div>
+        </section>
+      )}
+
       {/* CTA Section */}
       <section className="nexus-section-padding nexus-hero-gradient text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
