@@ -134,7 +134,7 @@ const implementationDetails = {
   participants: '推奨 5～20名（それ以上は要相談）',
   preparation: 'PC、ネット環境、使用するクラウドツール（貴社環境に合わせます）',
   price: '1名 400,000円（2名～）',
-  priceNote: '税別'
+  priceNote: '税込'
 };
 
 const faqs = [
@@ -171,7 +171,7 @@ export default function GeneralTrainingPage() {
             }} />
             <div className="mb-8">
               <div className="bg-[#ffdf2b] text-black px-6 py-3 rounded-lg inline-block mb-4">
-                <span className="text-lg font-bold">料金：1名 400,000円（税別）</span>
+                <span className="text-lg font-bold">料金：1名 400,000円（税込）</span>
               </div>
               <p className="text-gray-300">
                 対象：全業種・全部門（営業／バックオフィス／企画／管理職など）
@@ -357,7 +357,8 @@ export default function GeneralTrainingPage() {
           <p className="text-xl text-gray-300 mb-8">
             生成AIを"使える"状態まで最短で引き上げたい企業様は、お気軽にご相談ください。
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:
+          flex-row gap-4 justify-center">
             <Link href="/contact">
               <Button className="nexus-button-primary text-lg px-8 py-4">
                 お問い合わせ・相談する
