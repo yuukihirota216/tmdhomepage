@@ -348,6 +348,41 @@ export default function GeneralTrainingPage() {
         </div>
       </section>
 
+      {/* Company Information Section */}
+      <section className="nexus-section-padding bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+              企業情報
+            </h2>
+          </div>
+
+          <Card className="shadow-lg border-0">
+            <CardContent className="p-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">会社名</h3>
+                  <p className="text-gray-700 mb-6">有限会社TMD</p>
+                  
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">本社</h3>
+                  <p className="text-gray-700">
+                    大阪府豊中市曽根東町6-5-2-304号室
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">梅田オフィス</h3>
+                  <p className="text-gray-700">
+                    〒530-0011<br />
+                    大阪市北区大深町6番38号<br />
+                    グラングリーン大阪 北館JAMBASE6階JAM-DESK
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="nexus-section-padding nexus-hero-gradient text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -357,8 +392,7 @@ export default function GeneralTrainingPage() {
           <p className="text-xl text-gray-300 mb-8">
             生成AIを"使える"状態まで最短で引き上げたい企業様は、お気軽にご相談ください。
           </p>
-          <div className="flex flex-col sm:
-          flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
               <Button className="nexus-button-primary text-lg px-8 py-4">
                 お問い合わせ・相談する
