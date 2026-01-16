@@ -387,7 +387,7 @@ export default function GeneralTrainingPage() {
       <section className="nexus-section-padding nexus-hero-gradient text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">
-            お問い合わせ（CTA）
+            お問い合わせ
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             生成AIを"使える"状態まで最短で引き上げたい企業様は、お気軽にご相談ください。
