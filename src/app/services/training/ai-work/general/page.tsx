@@ -129,7 +129,7 @@ const curriculum = [
 ];
 
 const implementationDetails = {
-  format: 'オンライン',
+  format: '実地研修orオンライン',
   duration: '合計12時間',
   participants: '推奨 5～20名（それ以上は要相談）',
   preparation: 'PC、ネット環境、使用するクラウドツール（貴社環境に合わせます）',
