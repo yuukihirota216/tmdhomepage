@@ -58,7 +58,6 @@ const curriculum = [
     session: '第1回',
     duration: '120分',
     title: '生成AI基礎・プロンプト入門設計実践',
-    description: '代表的なチャット型生成AIツールを中心に、生成AIの基本原理や効果的なプロンプト設計の技術を実践的に学びます。初心者でも実務に活用できる基礎スキルを習得します。',
     goals: [
       '生成AIの基本原理の理解',
       '効果的なプロンプト設計の習得',
@@ -70,7 +69,6 @@ const curriculum = [
     session: '第2回',
     duration: '120分',
     title: 'クラウド型グループウェアでの生成AI活用①',
-    description: 'メール、カレンダー、ドキュメント作成、Web会議など、コミュニケーション・文書作成を中心とした機能と生成AIを連携させ、日常業務の効率化を実践的に学びます。',
     goals: [
       'AIを活用したメール作成・返信の効率化',
       'ドキュメント作成・編集における生成AI活用',
@@ -82,7 +80,6 @@ const curriculum = [
     session: '第3回',
     duration: '120分',
     title: 'クラウド型グループウェアでの生成AI活用②',
-    description: '表計算、ファイル共有、AI研究ツールなど、データ管理・分析・ナレッジ活用を中心とした機能と生成AIを連携させ、情報整理と活用の効率化を実践的に学びます。',
     goals: [
       '表計算ソフト活用の基礎固め',
       'ファイル共有機能での効果的な情報管理と検索',
@@ -94,7 +91,6 @@ const curriculum = [
     session: '第4回',
     duration: '120分',
     title: '定型業務のAI効率化',
-    description: 'チャット型生成AIツールと表計算ソフト連携の生成AI支援ツールを用いて、名簿・台帳管理、フォーム作成、定型書類作成などの業務を自動化・効率化する手法を実践的に学びます。',
     goals: [
       '定型書類・フォーム作成の時間短縮',
       '名簿・台帳管理の正確性向上',
@@ -106,7 +102,6 @@ const curriculum = [
     session: '第5回',
     duration: '120分',
     title: '会計業務のAI効率化',
-    description: 'チャット型生成AIツールと画像認識・OCR機能を活用し、レシート・領収書の入力作業や仕訳業務の自動化を実践的に学びます。経理担当者の作業負担軽減と正確性向上を目指します。',
     goals: [
       'レシート・領収書入力作業の大幅な時間短縮',
       '仕訳作業の効率化と入力ミス削減',
@@ -118,7 +113,6 @@ const curriculum = [
     session: '第6回',
     duration: '120分',
     title: 'クリエイティブ作成におけるAI活用',
-    description: 'チャット型生成AI・画像生成AI・デザインツールのAI機能を活用し、チラシ・バナー・プレゼン資料・SNS投稿など、様々なクリエイティブを効率的に作成する手法を学びます。',
     goals: [
       'キャッチコピー・文章作成の時間短縮と品質向上',
       'ターゲット・媒体に合わせた表現力の習得',
@@ -130,7 +124,6 @@ const curriculum = [
     session: '第7回',
     duration: '120分',
     title: '総合演習・実務定着ワークショップ',
-    description: '全6回で習得した生成AIスキルを振り返り、実際の業務課題を題材にしたグループワークを通じて、学んだ知識を実務に定着させ、継続的なAI活用の土台を築きます。',
     goals: [
       '全6回の学習内容の整理と定着',
       '業務課題とAI活用ポイントの明確化',
@@ -145,7 +138,7 @@ const implementationDetails = {
   duration: '合計14時間（全7回×各120分）',
   participants: '推奨 5～20名（それ以上は要相談）',
   preparation: 'PC、ネット環境、使用するクラウドツール（貴社環境に合わせます）',
-  price: '1名 400,000円（2名～）',
+  price: '1名 400,000円（3名～）',
   priceNote: '税込'
 };
 
@@ -183,7 +176,7 @@ export default function GeneralTrainingPage() {
             }} />
             <div className="mb-8">
               <div className="bg-[#ffdf2b] text-black px-6 py-3 rounded-lg inline-block mb-4">
-                <span className="text-lg font-bold">料金：1名 400,000円（税込）</span>
+                <span className="text-lg font-bold">料金：1名 400,000円（3名～・税込）</span>
               </div>
               <p className="text-gray-300">
                 対象：全業種・全部門（営業／バックオフィス／企画／管理職など）
@@ -272,12 +265,9 @@ export default function GeneralTrainingPage() {
                       <span className="text-sm text-gray-500">{session.duration}</span>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      <h3 className="text-xl font-bold text-gray-900 mb-3">
                         {session.title}
                       </h3>
-                      <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                        {session.description}
-                      </p>
                       <div className="flex flex-wrap gap-2">
                         {session.goals.map((goal, goalIndex) => (
                           <span key={goalIndex} className="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full">
