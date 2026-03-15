@@ -278,24 +278,24 @@ export default function AIWorkTrainingHubPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-2xl md:text-3xl font-bold mb-3 text-gray-900">
-              過去の研修パッケージ
+              その他の研修プラン
             </h2>
             <p className="text-gray-600">
-              これまでにご提供していた研修パッケージのアーカイブです。
+              必要に応じてこちらもご受講いただけます。
             </p>
           </div>
 
           <div className="max-w-sm mx-auto">
             <Card className="shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
               <CardContent className="p-6 text-center">
-                <Badge className="bg-amber-500 text-white mb-3">旧版</Badge>
+                <Badge className="text-white mb-3" style={{backgroundColor: '#142248'}}>2名～受講可能</Badge>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">
                   生成AI 業務活用研修｜合計12時間
                 </h3>
                 <p className="text-gray-500 text-sm mb-4">全6回・各120分のカリキュラム</p>
                 <Link href="/services/training/ai-work/general/archive">
-                  <Button variant="outline" className="w-full text-gray-600 border-gray-300">
-                    アーカイブを見る
+                  <Button className="nexus-button-primary w-full">
+                    詳細を見る
                   </Button>
                 </Link>
               </CardContent>

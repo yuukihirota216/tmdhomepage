@@ -265,16 +265,9 @@ export default function GeneralTrainingPage() {
                       <span className="text-sm text-gray-500">{session.duration}</span>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      <h3 className="text-xl font-bold text-gray-900">
                         {session.title}
                       </h3>
-                      <div className="flex flex-wrap gap-2">
-                        {session.goals.map((goal, goalIndex) => (
-                          <span key={goalIndex} className="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full">
-                            {goal}
-                          </span>
-                        ))}
-                      </div>
                     </div>
                   </div>
                 </CardContent>
@@ -426,7 +419,7 @@ export default function GeneralTrainingPage() {
           </div>
           <p className="text-gray-400 text-sm">
             <Link href="/services/training/ai-work/general/archive" className="underline hover:text-gray-300">
-              過去の研修パッケージ（合計12時間）はこちら
+              合計12時間プラン（2名～受講可能）はこちら
             </Link>
           </p>
         </div>
