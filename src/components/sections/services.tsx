@@ -21,8 +21,8 @@ export function ServicesSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <AnimatedCard key={service.id} delay={index * 0.1}>
-              <div className="bg-white h-full rounded-2xl overflow-hidden group hover:shadow-xl transition-all duration-500 shadow-lg border border-gray-100 flex flex-col">
+            <AnimatedCard key={service.id} delay={index * 0.1} className="group">
+              <div className="h-full flex flex-col">
                 <CardHeader className="text-center pb-4 flex-shrink-0">
                   <div className="mb-4 group-hover:scale-110 transition-transform duration-300 flex justify-center">
                     {service.id === 'ai-development' ? (
