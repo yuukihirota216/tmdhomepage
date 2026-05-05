@@ -95,31 +95,28 @@ export default function CompanyPage() {
                         className="object-cover rounded-lg shadow-lg"
                       />
                     </div>
-                    <div className="space-y-6 text-gray-700 leading-relaxed">
+                    <div className="space-y-6 text-gray-700 leading-relaxed text-left">
                       <div className="text-center mb-6">
-                        <h4 className="text-2xl font-bold text-gray-900 mb-2">AIの力で、すべての企業に革新を</h4>
+                        <h4 className="text-2xl font-bold text-gray-900 mb-2">人に寄り添うAIを、日本の現場へ。</h4>
                         <p className="font-semibold text-lg text-gray-800">代表取締役　廣田 優希</p>
                       </div>
                       <p>
-                        生成AIは、私たちの働き方とビジネスの在り方を根本から変革する、まさに時代の転換点となる技術です。
+                        技術は、人を急かすためにあるのか。それとも、人に寄り添うためにあるのか。生成AIの時代を迎えた今、私たちはこの問いを起点に事業を営んでいます。
                       </p>
                       <p>
-                        私はこれまで、数々の東証一部上場企業や官公庁において、AI開発やDX推進プロジェクトを手がけ、最先端技術がもたらす変革の現場に立ち会ってまいりました。その経験を通じて確信したことは、この革新的な技術の恩恵は、大企業だけのものではないということです。
+                        これまでプライム市場上場企業や官公庁において、AI開発・DX推進プロジェクトに数多く携わってまいりました。最先端の現場に立ち会う中で確信したのは、AIの恩恵は大企業だけのものではないということです。
                       </p>
                       <p>
-                        日本経済を支える中小・中堅企業の皆様にこそ、生成AIの力を届けたい。そして、それぞれの企業が持つ独自の強みと掛け合わせることで、新たな価値創造を実現していただきたい。この想いが、私たちの事業の原点です。
+                        むしろ、限られた人手で多くの『人手不足』や『めんどくさい』を抱える中小・中堅企業の現場こそ、本来この力を最も必要としている場所だと、私は考えています。
                       </p>
                       <p>
-                        私たちは、単なる技術提供者ではありません。提携企業との産学連携ネットワークを最大限に活用し、最新の研究成果と実践的なビジネスノウハウを融合させることで、お客様企業の内製化支援から開発コンサルティングまで、包括的なサポートを提供いたします。
+                        私たちは、単なる技術提供者ではありません。産学連携で培ったアカデミックな知見と、大企業のDX現場で磨いた実践知を、お客様の言葉に翻訳する——これが TMDの役割です。最先端を探究し続けながら、決して大きく見せない「等身大のAI」を、お客様の現場にお届けします。
                       </p>
                       <p>
-                        目指すのは、お客様の生産性を最大化し、競争力を飛躍的に向上させること。そして、AIと人が協働する新しい働き方を通じて、より創造的で価値ある仕事に集中できる環境を実現することです。
-                      </p>
-                      <p>
-                        生成AIという革新的な技術を、すべての企業の成長エンジンへ。
+                        私たちが目指すのは、生産性の最大化だけではありません。アイディアと技術で現場の『めんどくさい』をなくし、その先に本質的な、人らしい時間を生み出すこと。創造的な仕事と向き合う時間、仲間と語らう時間、人として豊かに在れる時間——その時間を取り戻すことこそ、私たちの使命だと考えています。
                       </p>
                       <p className="font-semibold">
-                        私たちは、お客様と共に歩み、共に成長するパートナーとして、全力でサポートさせていただきます。
+                        技術が人を急かすのではなく、人に寄り添う社会へ。私たちは、お客様、仲間、社会——すべてのステークホルダーへの感謝を忘れず、日本一泥臭い伴走者を目指して、お客様と共に歩んでまいります。
                       </p>
                     </div>
                   </div>
@@ -165,10 +162,8 @@ export default function CompanyPage() {
                   </CardHeader>
                   <CardContent className="text-center">
                     <p className="text-gray-700 leading-relaxed">
-                      <strong className="text-gray-900">AIの力で、すべての企業に<br />
-                      実装可能なイノベーションを</strong><br />
-                      技術と教育の両輪で企業の課題を解決し、<br />
-                      日本のDXを現場から変革する
+                      アイディアと技術で『めんどくさい』をなくし、<br />
+                      本質的な人らしい時間を生み出す。
                     </p>
                   </CardContent>
                 </Card>
@@ -198,8 +193,8 @@ export default function CompanyPage() {
                   </CardHeader>
                   <CardContent className="text-center">
                     <p className="text-gray-700 leading-relaxed">
-                      AIと人間が協働する未来を実現し、
-                      すべての企業がAIの恩恵を享受できる社会を創造する
+                      技術が人を急かすのではなく、<br />
+                      人に寄り添う社会へ。
                     </p>
                   </CardContent>
                 </Card>
@@ -222,32 +217,28 @@ export default function CompanyPage() {
                         />
                       </AnimatedIcon>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">価値観</h3>
+                    <h3 className="text-xl font-bold text-gray-900">バリュー</h3>
                     <div className="bg-[#ffdf2b] text-black px-3 py-1 rounded-md inline-block shadow-md">
-                      <p className="text-sm font-semibold">VALUES</p>
+                      <p className="text-sm font-semibold">VALUE</p>
                     </div>
                   </CardHeader>
                   <CardContent>
+                    <p className="text-sm text-gray-700 mb-4 text-center">
+                      『謙虚』『探究』『再現性』を大切に、<br />感謝を還元し続ける。
+                    </p>
+                    <p className="text-xs font-semibold text-gray-500 mb-3 text-center">行動指針</p>
                     <div className="space-y-4">
                       <div>
-                        <h4 className="font-semibold text-gray-900 mb-1">1. 実装ファースト</h4>
-                        <p className="text-sm text-gray-600">理論だけでなく、「使える形」にする</p>
+                        <h4 className="font-semibold text-gray-900 mb-1">1. 謙虚と感謝</h4>
+                        <p className="text-sm text-gray-600">謙虚な気持ちを忘れず、全てのステークホルダーに感謝を還元し続ける</p>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 mb-1">2. 現場主義</h4>
-                        <p className="text-sm text-gray-600">机上の空論ではなく、現場の課題から始める</p>
+                        <h4 className="font-semibold text-gray-900 mb-1">2. 探究と再現性</h4>
+                        <p className="text-sm text-gray-600">アカデミックな知見も交えながら最先端の技術を探究し続けた上で等身大のAIを提供する</p>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 mb-1">3. 伴走型支援</h4>
-                        <p className="text-sm text-gray-600">導入して終わりではなく、定着まで責任を持つ</p>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-1">4. 技術×教育</h4>
-                        <p className="text-sm text-gray-600">開発力と教育力の融合で、真の変革を実現する</p>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-1">5. 共創の精神</h4>
-                        <p className="text-sm text-gray-600">クライアントと共に学び、共に成長する</p>
+                        <h4 className="font-semibold text-gray-900 mb-1">3. 泥臭い伴走</h4>
+                        <p className="text-sm text-gray-600">日本一泥臭くを目指し、人の気持ちに寄り添った正直な伴走を通じて、お客様と共に歩む。</p>
                       </div>
                     </div>
                   </CardContent>
