@@ -4,6 +4,7 @@ import { HoverCard } from '@/components/animations/hover-card';
 import { AnimatedIcon } from '@/components/animations/animated-icon';
 import { companyInfo } from '@/data/company';
 import Image from 'next/image';
+import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -245,6 +246,22 @@ export default function CompanyPage() {
                 </Card>
               </HoverCard>
             </ScrollReveal>
+          {/* Our Philosophy Button */}
+          <ScrollReveal delay={0.3}>
+            <div className="text-center mt-12">
+              <Link href="/company/philosophy">
+                <span className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
+                  Our Philosophy
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+              <p className="text-gray-500 text-sm mt-3">— TMDの理念体系 —</p>
+            </div>
+          </ScrollReveal>
+
           </div>
         </div>
       </section>
